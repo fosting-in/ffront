@@ -6,9 +6,14 @@ var app = angular.module('myApp', []);
 
 app.controller('MyController', function($scope, $http) {
     $http({
-        method: 'GET',
+        method: 'POST',
         url: 'https://api.fosting.in/api',
-        withCredentials: false
+        withCredentials: false,
+        data: {
+            key1: "a",
+            key2: "b",
+            key3: "c"
+        },
     }).then(function successCallback(response) {
         console.log(response);
         $scope.x = response.data;
