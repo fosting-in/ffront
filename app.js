@@ -5,21 +5,19 @@ var url2 = 'https://api.fosting.in/api'
 var app = angular.module('myApp', []);
 
 app.controller('MyController', function($scope, $http) {
-    // var config = {
-    //     headers: {
-    //         'Access-Control-Allow-Origin': '*'
-    //     }
-    // };
-    // $http.get(url2, config)
-    //     .then(function(response) {
-    //         $scope.data = response.data;
-    //     }, function(error) {
-    //         console.error('Error fetching data:', error);
-    //     });
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.fosting.in/api", true);
-xhr.withCredentials = false;
-xhr.send(null);
-console.log(xhr)
+    $http({
+        method: 'GET',
+        url: 'https://api.fosting.in/api',
+        withCredentials: false
+    }).then(function successCallback(response) {
+        console.log(response);
+    }, function errorCallback(response) {
+        console.log('Error: ', response);
+    });
+    // const xhr = new XMLHttpRequest();
+    // xhr.open("GET", "https://api.fosting.in/api", true);
+    // xhr.withCredentials = false;
+    // xhr.send(null);
+    // console.log(xhr)
 });
 
