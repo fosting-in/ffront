@@ -1,6 +1,6 @@
 var app = angular.module('myApp', []);
 var url1 = "https://3k8nooux38.execute-api.us-east-1.amazonaws.com/prod"
-var url2 = 'https://api.fosting.in/apitest' 
+var url2 = 'https://api.fosting.in/api' 
 
 var app = angular.module('myApp', []);
 
