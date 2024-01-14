@@ -7,8 +7,7 @@ var app = angular.module('myApp', []);
 app.controller('MyController', function($scope, $http) {
     var config = {
         headers: {
-            'Origin': 'fosting.in',
-            'Access-Control-Allow-Origin': 'https://fosting.in'
+            'Access-Control-Allow-Origin': '*'
         }
     };
 
