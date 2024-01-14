@@ -12,7 +12,7 @@ app.controller('MyController', function($scope, $http) {
         }
     };
 
-    $http.get('https://yourbackendapi.com/data', config)
+    $http.get(url2, config)
         .then(function(response) {
             $scope.data = response.data;
         }, function(error) {
