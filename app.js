@@ -6,7 +6,7 @@ var app = angular.module('myApp', []);
 
 app.controller('MyController', function($scope, $http) {
     $http({
-        method: 'POST',
+        method: 'GET',
         url: url2,
         withCredentials: false
     }).then(function successCallback(response) {
