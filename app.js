@@ -6,7 +6,7 @@ var app = angular.module('myApp', []);
 
 app.controller('MyController', function($scope, $http) {
     $http({
-        method: 'GET',
+        method: 'POST',
         url: url2,
         data: '{"hello": "world"}',
         withCredentials: false
