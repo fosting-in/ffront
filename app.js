@@ -7,7 +7,7 @@ var app = angular.module('myApp', []);
 app.controller('MyController', function($scope, $http) {
     $http({
         method: 'GET',
-        url: url2,'
+        url: url2,
         data: '{"hello": "world"}',
         withCredentials: false
     }).then(function successCallback(response) {
