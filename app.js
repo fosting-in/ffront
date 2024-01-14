@@ -8,12 +8,7 @@ app.controller('MyController', function($scope, $http) {
     $http({
         method: 'POST',
         url: url2,
-        data: {
-            key1: "a",
-            key2: "b",
-            key3: "c"
-        },
-        withCredentials: false,
+        withCredentials: false
     }).then(function successCallback(response) {
         console.log(response);
         $scope.x = response.data;
