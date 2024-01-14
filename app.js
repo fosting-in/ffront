@@ -11,13 +11,9 @@ app.controller('MyController', function($scope, $http) {
         withCredentials: false
     }).then(function successCallback(response) {
         console.log(response);
+        $scope.x = response.data;
     }, function errorCallback(response) {
         console.log('Error: ', response);
     });
-    // const xhr = new XMLHttpRequest();
-    // xhr.open("GET", "https://api.fosting.in/api", true);
-    // xhr.withCredentials = false;
-    // xhr.send(null);
-    // console.log(xhr)
 });
 
